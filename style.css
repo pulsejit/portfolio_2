@@ -14,7 +14,7 @@ body{
 }
 
 #left{
-    flex:4;
+    flex:5;
     background-color: #1F1F1F;
     color:#fff;
     height: 100vh;
@@ -56,5 +56,222 @@ body{
 #right{
     flex:2;
     background-color: #fff;
-
 }
+
+#right #hamburger{
+    display: flex;
+    justify-content: flex-end;
+    margin: 68px 60px;
+    align-items: left;
+    cursor: pointer;
+}
+
+#right #hamburger .bars > div{
+    width:35px;
+    height:2px;
+    background-color: #333;
+    margin:6px 0;
+}
+
+#right #hamburger .bars .bar2::before{
+    content:"";
+    /* width:10px;
+    height:2px; */
+    /* background-color: #333; */
+    /* margin:6px 0; */
+}
+
+/* #right #hamburger .bars .bar1{
+    width:35px;
+    height:2px;
+    background-color: #333;
+    margin:6px 0;
+}
+#right #hamburger .bars .bar2{
+    width:45px;
+    height:2px;
+    background-color: #333;
+    margin:6px 0;
+}
+#right #hamburger .bars .bar3{
+    width:55px;
+    height:2px;
+    background-color: #333;
+    margin:6px 0;
+} */
+
+
+#right section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#right section .profile-picture img{
+    margin: auto;
+    max-width: 100%;
+    height: 380px;
+    box-shadow: -1px 1px 4px 1px rgba(0, 0, 255, .2);
+}
+
+#right section .links{
+    padding: 24px 24px 10px 24px;
+}
+
+#right section .links > a:nth-child(1),
+#right section .links > a:nth-child(2){
+    text-decoration: none;
+    color: #000;
+    padding: 0 2px;
+    /* border-right: .1rem solid black; */
+}
+
+#right section .links a{
+    text-decoration: none;
+    color: #000;
+    position: relative;
+    /* idk why inline block is working but it's working */
+    display: inline-block;
+}
+
+
+.links a:after{
+    content:"";
+    position:absolute;
+    display: block;
+    width:100%;
+    height: 1px;
+    bottom: 0;
+    background-color: #000;
+    transform: scaleX(0);
+    transition: all 0.3s cubic-bezier(0.45,0.05,0.55,0.95);
+}
+
+.links a:hover:after{
+    transform: scaleX(1);
+}
+
+@-webkit-keyframes colours1 {
+      0% {color: #00f;}
+     50% {color: #0f0;}
+     75%{color:#000;}
+     100% {color: #f00;}
+}
+
+@-webkit-keyframes colours2 {
+      0% {color: red;}
+     50% {color: green;}
+     75%{color:black;}
+     100% {color: blue;}
+}
+
+@-webkit-keyframes colours3 {
+      0% {color: purple;}
+     50% {color: yellow;}
+     75%{color:violet;}
+     100% {color: black;}
+}
+
+@-webkit-keyframes colours4 {
+      0% {color: orange;}
+     50% {color: black;}
+     75%{color:blue;}
+     100% {color: purple;}
+}
+
+#a {
+    -webkit-animation-direction: normal;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: colours1;
+    /* -webkit-animation-timing-function: ease; */
+    -webkit-animation-timing-function: steps(3, end);
+}
+
+#b {
+    -webkit-animation-direction: normal;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: colours2;
+    /* -webkit-animation-timing-function: ease; */
+    -webkit-animation-timing-function: steps(2, end);
+}
+
+#c {
+    -webkit-animation-direction: normal;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: colours3;
+    /* -webkit-animation-timing-function: ease; */
+    -webkit-animation-timing-function: steps(2, end);
+}
+
+#d {
+    -webkit-animation-direction: normal;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: colours4;
+    /* -webkit-animation-timing-function: ease; */
+    -webkit-animation-timing-function: steps(2, end);
+}
+
+.em{
+  font-size: 1.2rem;
+  font-weight:600;
+  cursor: pointer;
+}
+
+
+/* footer start */
+footer{
+    /* padding:5px; */
+    margin-top: 24px;
+    margin-left: 4px;
+    font-size: 1.1rem;
+}
+#left footer a{
+    text-decoration: none;
+    color:#fff;
+    padding-bottom: 2px;
+}
+
+#right footer a{
+    text-decoration: none;
+    color:#000;
+    padding-bottom: 2px;
+}
+
+.link{
+  position:relative;
+}
+
+.link1:after{
+    content:"";
+/*     display:block; */
+    position:absolute;
+    width:0;
+    right:0;
+    bottom: 0;
+    height:1px;
+    background-color: #fff;
+    transition: width .18s cubic-bezier(0.45,0.05,0.55,0.95);
+}
+
+.link2:after{
+    content:"";
+/*     display:block; */
+    position:absolute;
+    width:0;
+    right:0;
+    bottom: 0;
+    height:2px;
+    background-color: #000;
+    transition: width .18s cubic-bezier(0.45,0.05,0.55,0.95);
+}
+
+.link:hover:after{
+  width:100%;
+  left:0;
+}
+
+/* footer end */
